@@ -1,26 +1,29 @@
-:root{
+:root {
   --color1: whitesmoke;
   --color2: #272727;
   --color3: #1E1E1E;
   --iconColor: #1d1d1d41;
+  --bg-gradient: linear-gradient(to top, #56ccf2, #2f80ed);
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-main{
-  background-color: whitesmoke;
+
+main {
+  background: var(--bg-gradient);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  transition: background 0.5s ease-in-out;
+  transition: background 0.6s ease-in-out;
 }
 
-.card-weather{
+.card-weather {
   background-color: rgba(122, 119, 119, 0.11);
   backdrop-filter: blur(10px);
   text-align: center;
@@ -32,7 +35,7 @@ main{
   max-width: 450px;
 }
 
-.card-weather .data-w{
+.card-weather .data-w {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -41,9 +44,9 @@ main{
   margin-top: 1em;
   padding: 1em;
   width: 100%;
-  
 
-  .data-w-icon{
+
+  .data-w-icon {
     flex: 1;
     height: auto;
     padding: 1em;
@@ -55,17 +58,18 @@ main{
     flex-direction: column;
     gap: 10px;
     overflow: hidden;
-    
-    h4{
+
+    h4 {
       font-weight: 300;
     }
-    img{
+
+    img {
       width: 100%;
     }
   }
 }
 
-select{
+select {
   padding: 1em;
   border-radius: 5px;
   border: none;
@@ -78,32 +82,38 @@ select{
 }
 
 .bg-clear {
-  background: linear-gradient(to top, #56ccf2, #2f80ed);
-}
-.bg-clouds {
-  background: linear-gradient(to top, #ecebeb, #757f9a);
-}
-.bg-rain {
-  background: linear-gradient(to bottom, #000428, #004e92);
-}
-.bg-snow {
-  background: linear-gradient(to top, #83a4d4, #b6fbff);
-}
-.bg-fog {
-  background: linear-gradient(to top, #606c88, #3f4c6b);
-}
-.bg-thunder {
-  background: linear-gradient(to top, #141e30, #243b55);
+  --bg-gradient: linear-gradient(to top, #56ccf2, #2f80ed);
 }
 
-option{
+.bg-clouds {
+  --bg-gradient: linear-gradient(to top, #ecebeb, #757f9a);
+}
+
+.bg-rain {
+  --bg-gradient: linear-gradient(to bottom, #000428, #004e92);
+}
+
+.bg-snow {
+  --bg-gradient: linear-gradient(to top, #83a4d4, #b6fbff);
+}
+
+.bg-fog {
+  --bg-gradient: linear-gradient(to top, #606c88, #3f4c6b);
+}
+
+.bg-thunder {
+  --bg-gradient: linear-gradient(to top, #141e30, #243b55);
+}
+
+
+option {
   background-color: var(--iconColor);
   color: var(--color);
 }
 
-@media screen and (max-width: 600px){
-  .card-weather{
+@media screen and (max-width: 600px) {
+  .card-weather {
     width: 90%;
   }
-  
+
 }

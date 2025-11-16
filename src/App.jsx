@@ -43,7 +43,7 @@ function App() {
         <div className="input-city">
           <select name="" id="" onChange={(e) => setCity(e.target.value)}>
             <option value="London" onClick={() => setCity('London')}>London</option>
-            <option value="bogota" onClick={() => setCity('Bogota')}>Bogota</option>
+            <option value="bogota" onClick={() => setCity('Bogotá')}>Bogotá</option>
             <option value="New York" onClick={() => setCity('New York')}>New York</option>
             <option value="Madrid" onClick={() => setCity('Madrid')}>Madrid</option>
             <option value="Tokyo" onClick={() => setCity('Tokyo')}>Tokyo</option>
